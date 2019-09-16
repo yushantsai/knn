@@ -137,7 +137,7 @@ def float_range(val_min=None, val_max=None):
 def main():
     parser = argparse.ArgumentParser()  # argument settings
     parser.add_argument('-d', '--dist_metric', choices=['euclidean', 'manhattan'], nargs='?', default='euclidean', help='distance between points in an n-dimensional space.')
-    parser.add_argument('-f', '--filepath', choices=['euclidean', 'manhattan'], nargs='?', default='sample.csv', help='csv file path.')
+    parser.add_argument('-f', '--filepath', nargs='?', default='sample.csv', help='csv file path.')
     parser.add_argument('-s', '--train_size_percent', type=float_range(0, 1), nargs='?', default=0.9, help='size of training set (percentage).')
     parser.add_argument('-k', '--knn', type=int, nargs='?', default=3, help='number of nearest neighbors')
     args = parser.parse_args()
